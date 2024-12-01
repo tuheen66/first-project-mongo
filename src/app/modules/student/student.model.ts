@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
-import { Schema, SchemaType, model } from 'mongoose';
+import { Schema,  model } from 'mongoose';
 import validator from 'validator';
-import bcrypt from 'bcrypt';
+
 import {
   TGuardian,
   TLocalGuardian,
@@ -10,7 +10,7 @@ import {
   StudentModel,
   TUserName,
 } from './student.interface';
-import config from '../../config';
+
 
 const userNameSchema = new Schema<TUserName>({
   firstName: {
@@ -98,11 +98,6 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       unique: true,
       ref: 'User',
     },
-    password: {
-      type: String,
-      required: [true, 'Password is required'],
-      maxlength: [20, 'Password cannot be more than 20 characters long'],
-    },
 
     name: {
       type: userNameSchema,
@@ -174,24 +169,6 @@ studentSchema.virtual('fullName').get(function () {
   return `${this.name.firstName} ${this.name.middleName} ${this.name.lastName}`;
 });
 
-// pre save middleware / hook
-studentSchema.pre('save', async function (next) {
-  const user = this;
-  // hashing password and saving into DB
-  user.password = await bcrypt.hash(
-    user.password,
-    Number(config.bcrypt_salt_rounds),
-  );
-  next();
-});
-
-//post save middleware / hook
-studentSchema.post('save', function (doc, next) {
-  doc.password = '';
-
-  next();
-});
-
 // Query Middleware
 
 studentSchema.pre('find', function (next) {
@@ -216,11 +193,6 @@ studentSchema.statics.isUserExists = async function (id: string) {
   return existingUser;
 };
 
-// creating custom instance method
 
-// studentSchema.methods.isUserExists = async function(id:string){
-// const existingUser = await Student.findOne({id})
-// return existingUser;
-// }
 
 export const Student = model<TStudent, StudentModel>('Student', studentSchema);
