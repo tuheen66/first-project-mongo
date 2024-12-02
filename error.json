@@ -1,0 +1,54 @@
+{
+    "name": "Autumn",
+    "code": "01",
+    "year": "2030",
+    "startMonth": "January",
+    "endMonth": "April"
+}
+
+
+{
+    "success": false,
+    "message": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"year\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"expected\": \"'01' | '02' | '03'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"code\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"expected\": \"'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"startMonth\"\n    ],\n    \"message\": \"Required\"\n  },\n  {\n    \"expected\": \"'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December'\",\n    \"received\": \"undefined\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"endMonth\"\n    ],\n    \"message\": \"Required\"\n  }\n]",
+    "error": {
+        "issues": [
+            {
+                "code": "invalid_type",
+                "expected": "string",
+                "received": "undefined",
+                "path": [
+                    "year"
+                ],
+                "message": "Required"
+            },
+            {
+                "expected": "'01' | '02' | '03'",
+                "received": "undefined",
+                "code": "invalid_type",
+                "path": [
+                    "code"
+                ],
+                "message": "Required"
+            },
+            {
+                "expected": "'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December'",
+                "received": "undefined",
+                "code": "invalid_type",
+                "path": [
+                    "startMonth"
+                ],
+                "message": "Required"
+            },
+            {
+                "expected": "'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December'",
+                "received": "undefined",
+                "code": "invalid_type",
+                "path": [
+                    "endMonth"
+                ],
+                "message": "Required"
+            }
+        ],
+        "name": "ZodError"
+    }
+}

@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-this-alias */
-import { Schema,  model } from 'mongoose';
+ 
+import { Schema, model } from 'mongoose';
 import validator from 'validator';
 
 import {
@@ -10,7 +10,6 @@ import {
   StudentModel,
   TUserName,
 } from './student.interface';
-
 
 const userNameSchema = new Schema<TUserName>({
   firstName: {
@@ -150,7 +149,14 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       type: localGuardianSchema,
       required: [true, 'Local guardian information is required'],
     },
+    
     profileImage: { type: String },
+
+    admissionSemester: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'AcademicSemester',
+    },
 
     isDeleted: {
       type: Boolean,
@@ -192,7 +198,5 @@ studentSchema.statics.isUserExists = async function (id: string) {
   const existingUser = await Student.findOne({ id });
   return existingUser;
 };
-
-
 
 export const Student = model<TStudent, StudentModel>('Student', studentSchema);
