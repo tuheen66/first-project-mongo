@@ -1,7 +1,7 @@
 import sendResponse from '../../utils/sendResponse';
 import catchAsync from '../../utils/catchAsync';
-import httpStatus from 'http-status';
 import { AcademicSemesterServices } from './academicSemester.service';
+import { StatusCodes } from 'http-status-codes';
 
 const createAcademicSemester = catchAsync(async (req, res) => {
   //   const { password, student: studentData } = req.body;
@@ -11,7 +11,7 @@ const createAcademicSemester = catchAsync(async (req, res) => {
   );
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Academic Semester is created successfully',
     data: result,
@@ -21,7 +21,7 @@ const createAcademicSemester = catchAsync(async (req, res) => {
 const getAllAcademicSemester = catchAsync(async (req, res) => {
   const result = await AcademicSemesterServices.getAllAcademicSemesterFromDB();
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Academic semesters are retrieved successfully',
     data: result,
@@ -34,7 +34,7 @@ const getSingleAcademicSemester = catchAsync(async (req, res) => {
     await AcademicSemesterServices.getSingleAcademicSemesterFromDB(semesterId);
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: StatusCodes.OK,
     success: true,
     message: 'Academic semester is retrieved successfully',
     data: result,
@@ -49,7 +49,7 @@ const updateAcademicSemester = catchAsync(async (req, res) => {
   );
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode:StatusCodes.OK,
     success: true,
     message: 'Academic semester is updated successfully',
     data: result,
