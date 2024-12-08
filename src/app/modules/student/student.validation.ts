@@ -4,16 +4,13 @@ import { z } from 'zod';
 const createUserNameValidationSchema = z.object({
   firstName: z
     .string()
-    .trim()
-    .max(20, { message: 'First Name can not be more than 20 characters' })
-    .refine(
-      (value) => value.charAt(0).toUpperCase() + value.slice(1) === value,
-      { message: 'First name must be in capitalize format' },
-    ),
-  middleName: z.string().optional(),
-  lastName: z.string().refine((value) => /^[A-Za-z]+$/.test(value), {
-    message: 'Last name cannot contain numbers',
-  }),
+    .min(1)
+    .max(20)
+    .refine((value) => /^[A-Z]/.test(value), {
+      message: 'First Name must start with a capital letter',
+    }),
+  middleName: z.string(),
+  lastName: z.string(),
 });
 
 // Guardian schema
@@ -50,8 +47,8 @@ const createStudentValidationSchema = z.object({
       permanentAddress: z.string(),
       guardian: createGuardianValidationSchema,
       localGuardian: createLocalGuardianValidationSchema,
-      admissionSemester:z.string(),
-      academicDepartment:z.string(),
+      admissionSemester: z.string(),
+      academicDepartment: z.string(),
       profileImage: z.string().optional(),
     }),
   }),
@@ -104,6 +101,5 @@ export const updateStudentValidationSchema = z.object({
 
 export const studentValidations = {
   createStudentValidationSchema,
-  updateStudentValidationSchema
-  
+  updateStudentValidationSchema,
 };

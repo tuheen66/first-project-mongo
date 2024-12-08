@@ -8,13 +8,13 @@ const router = express.Router();
 
 router.get('/', StudentControllers.getAllStudents);
 
-router.get('/:studentId', StudentControllers.getSingleStudent);
+router.get('/:id', StudentControllers.getSingleStudent);
 
-router.patch('/:studentId', 
+router.patch('/:id', 
     validateRequest(updateStudentValidationSchema),
     StudentControllers.updateStudent);
 
-router.delete('/:studentId', StudentControllers.deleteStudent);
+router.delete('/:id', StudentControllers.deleteStudent);
 
 
 
