@@ -1,4 +1,3 @@
- 
 import { Schema, model } from 'mongoose';
 import validator from 'validator';
 
@@ -116,7 +115,6 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       type: String,
       required: [true, 'Email is required'],
       unique: true,
-     
     },
     contactNo: {
       type: String,
@@ -146,7 +144,7 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       type: localGuardianSchema,
       required: [true, 'Local guardian information is required'],
     },
-    
+
     profileImage: { type: String },
 
     admissionSemester: {
@@ -174,7 +172,7 @@ const studentSchema = new Schema<TStudent, StudentModel>(
 
 // virtual
 studentSchema.virtual('fullName').get(function () {
-  return `${this.name.firstName} ${this.name.middleName} ${this.name.lastName}`;
+  return `${this?.name?.firstName} ${this?.name?.middleName} ${this?.name?.lastName}`;
 });
 
 // Query Middleware

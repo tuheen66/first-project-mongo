@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import mongoose from 'mongoose';
 import config from '../../config';
@@ -8,6 +9,7 @@ import { TUser } from './user.interface';
 import { User } from './user.model';
 import { generateStudentId } from './user.utils';
 import AppError from '../../errors/AppError';
+import { StatusCodes } from 'http-status-codes';
 
 const createStudentIntoDB = async (password: string, payload: TStudent) => {
   // create user object
@@ -39,7 +41,7 @@ const createStudentIntoDB = async (password: string, payload: TStudent) => {
     const newUser = await User.create([userData], { session }); // built in static method
 
     if (!newUser.length) {
-      throw new AppError(httpStatus.BAD_REQUEST, 'Failed to create user');
+      throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create user');
     }
     // set id, _id as user
     payload.id = newUser[0].id;
@@ -49,17 +51,17 @@ const createStudentIntoDB = async (password: string, payload: TStudent) => {
     const newStudent = await Student.create([payload], { session });
 
     if (!newStudent.length) {
-      throw new AppError(httpStatus.BAD_REQUEST, ' Failed to create student');
+      throw new AppError(StatusCodes.BAD_REQUEST, ' Failed to create student');
     }
 
     await session.commitTransaction();
     await session.endSession();
 
     return newStudent;
-  } catch (err) {
+  } catch (err:any) {
     await session.abortTransaction();
     await session.endSession();
-    throw new Error('Failed to create student');
+    throw new Error(err);
   }
 };
 

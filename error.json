@@ -1,25 +1,34 @@
 {
-    "success": false,
-    "message": "E11000 duplicate key error collection: first-project.students index: id_1 dup key: { id: \"2030010001\" }",
-    "error": {
-        "errorResponse": {
-            "index": 0,
-            "code": 11000,
-            "errmsg": "E11000 duplicate key error collection: first-project.students index: id_1 dup key: { id: \"2030010001\" }",
-            "keyPattern": {
-                "id": 1
+    "success": true,
+    "message": "Student are retrieved successfully",
+    "data": [
+        {
+            "_id": "6750343fcd82e8131a77916a",
+            "admissionSemester": {
+                "_id": "674cdcbc5b38a92e72fa297b",
+                "name": "Autumn",
+                "year": "2030",
+                "code": "01",
+                "startMonth": "January",
+                "endMonth": "April",
+                "createdAt": "2024-12-01T22:01:32.946Z",
+                "updatedAt": "2024-12-01T22:01:32.946Z",
+                "__v": 0
             },
-            "keyValue": {
-                "id": "2030010001"
-            }
+            "academicDepartment": {
+                "_id": "674f59157cd6a775402a3614",
+                "name": "Computer Science",
+                "academicFaculty": {
+                    "_id": "674f15998cdea1197d7adce3",
+                    "name": "Faculty of Engineering",
+                    "createdAt": "2024-12-03T14:28:42.002Z",
+                    "updatedAt": "2024-12-03T14:29:36.487Z",
+                    "__v": 0
+                },
+                "createdAt": "2024-12-03T19:16:37.435Z",
+                "updatedAt": "2024-12-03T19:34:12.494Z",
+                "__v": 0
+            },
+            "__v": 0,
+            "fullName": "undefined undefined undefined"
         },
-        "index": 0,
-        "code": 11000,
-        "keyPattern": {
-            "id": 1
-        },
-        "keyValue": {
-            "id": "2030010001"
-        }
-    }
-}
