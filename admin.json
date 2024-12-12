@@ -1,0 +1,106 @@
+[
+  {
+    "admin": {
+      "designation": "Manager",
+      "name": {
+        "firstName": "John",
+        "middleName": "",
+        "lastName": "Doe"
+      },
+      "gender": "male",
+      "dateOfBirth": "1985-06-15",
+      "email": "john.doe@example.com",
+      "contactNo": "1234567890",
+      "emergencyContactNo": "0987654321",
+      "bloodGroup": "O+",
+      "presentAddress": "123 Elm Street, Springfield",
+      "permanentAddress": "456 Oak Avenue, Springfield",
+      "profileImg": "https://example.com/profiles/johndoe.jpg",
+      "isDeleted": false
+    }
+  },
+  {
+    "admin": {
+      "designation": "HR",
+      "name": {
+        "firstName": "Jane",
+        "middleName": "",
+        "lastName": "Smith"
+      },
+      "gender": "female",
+      "dateOfBirth": "1990-09-25",
+      "email": "jane.smith@example.com",
+      "contactNo": "9876543210",
+      "emergencyContactNo": "1234567890",
+      "bloodGroup": "A+",
+      "presentAddress": "789 Maple Road, Greenfield",
+      "permanentAddress": "101 Pine Lane, Greenfield",
+      "profileImg": "https://example.com/profiles/janesmith.jpg",
+      "isDeleted": false
+    }
+  },
+  {
+    "admin": {
+      "designation": "Developer",
+      "name": {
+        "firstName": "Alice",
+        "middleName": "",
+        "lastName": "Brown"
+      },
+      "gender": "Female",
+      "dateOfBirth": "1995-03-10",
+      "email": "alice.brown@example.com",
+      "contactNo": "1122334455",
+      "emergencyContactNo": "5566778899",
+      "bloodGroup": "B+",
+      "presentAddress": "321 Birch Street, Riverdale",
+      "permanentAddress": "654 Cedar Road, Riverdale",
+      "profileImg": "https://example.com/profiles/alicebrown.jpg",
+      "isDeleted": false
+    }
+  },
+  {
+    "id": "A104",
+    "user": "64fbed9201234567890abcfcc",
+    "admin": {
+      "designation": "Designer",
+      "name": {
+        "firstName": "Mark",
+        "middleName": "",
+        "lastName": "Johnson"
+      },
+      "gender": "Male",
+      "dateOfBirth": "1987-11-20",
+      "email": "mark.johnson@example.com",
+      "contactNo": "3344556677",
+      "emergencyContactNo": "7788990011",
+      "bloodGroup": "AB+",
+      "presentAddress": "555 Palm Avenue, Meadowbrook",
+      "permanentAddress": "777 Spruce Way, Meadowbrook",
+      "profileImg": "https://example.com/profiles/markjohnson.jpg",
+      "isDeleted": false
+    }
+  },
+  {
+    "id": "A105",
+    "user": "64fbed9201234567890abcdcc",
+    "admin": {
+      "designation": "Analyst",
+      "name": {
+        "firstName": "Emily",
+        "middleName": "",
+        "lastName": "Davis"
+      },
+      "gender": "Female",
+      "dateOfBirth": "1992-01-15",
+      "email": "emily.davis@example.com",
+      "contactNo": "4455667788",
+      "emergencyContactNo": "9988776655",
+      "bloodGroup": "O-",
+      "presentAddress": "890 Hilltop Lane, Sunnyside",
+      "permanentAddress": "333 Valley Drive, Sunnyside",
+      "profileImg": "https://example.com/profiles/emilydavis.jpg",
+      "isDeleted": false
+    }
+  }
+]

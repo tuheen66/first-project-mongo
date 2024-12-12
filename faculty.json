@@ -1,0 +1,104 @@
+[
+    {
+      "id": "FAC001",
+      "user": "63c1f6c9f9d5a52d4b5a10d9",
+      "designation": "Professor",
+      "name": {
+        "firstName": "John",
+        "middleName":"",
+        "lastName": "Doe"
+      },
+      "gender": "male",
+      "dateOfBirth": "1980-05-14",
+      "email": "johndoe@example.com",
+      "contactNo": "+1234567890",
+      "emergencyContactNo": "+1234567899",
+      "bloodGroup": "O+",
+      "presentAddress": "123 Elm Street, Springfield",
+      "permanentAddress": "456 Oak Avenue, Springfield",
+      "profileImage": "profile_johndoe.jpg",
+      "academicDepartment": "63c1f6c9f9d5a52d4b5a11a1",
+      "isDeleted": false
+    },
+    {
+      "id": "FAC002",
+      "user": "63c1f6c9f9d5a52d4b5a10da",
+      "designation": "Assistant Professor",
+      "name": {
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
+      "gender": "female",
+      "dateOfBirth": "1985-09-21",
+      "email": "janesmith@example.com",
+      "contactNo": "+9876543210",
+      "emergencyContactNo": "+9876543211",
+      "bloodGroup": "A+",
+      "presentAddress": "789 Pine Road, Metropolis",
+      "permanentAddress": "101 Maple Lane, Metropolis",
+      "profileImage": "profile_janesmith.jpg",
+      "academicDepartment": "63c1f6c9f9d5a52d4b5a11a2",
+      "isDeleted": false
+    },
+    {
+      "id": "FAC003",
+      "user": "63c1f6c9f9d5a52d4b5a10db",
+      "designation": "Lecturer",
+      "name": {
+        "firstName": "Robert",
+        "lastName": "Brown"
+      },
+      "gender": "male",
+      "dateOfBirth": "1990-03-11",
+      "email": "robertbrown@example.com",
+      "contactNo": "+1357924680",
+      "emergencyContactNo": "+1357924681",
+      "bloodGroup": "B+",
+      "presentAddress": "202 Cedar Street, Gotham",
+      "permanentAddress": "303 Birch Boulevard, Gotham",
+      "profileImage": "profile_robertbrown.jpg",
+      "academicDepartment": "63c1f6c9f9d5a52d4b5a11a3",
+      "isDeleted": false
+    },
+    {
+      "id": "FAC004",
+      "user": "63c1f6c9f9d5a52d4b5a10dc",
+      "designation": "Associate Professor",
+      "name": {
+        "firstName": "Emily",
+        "lastName": "Davis"
+      },
+      "gender": "female",
+      "dateOfBirth": "1978-12-25",
+      "email": "emilydavis@example.com",
+      "contactNo": "+2468013579",
+      "emergencyContactNo": "+2468013580",
+      "bloodGroup": "AB-",
+      "presentAddress": "404 Chestnut Way, Star City",
+      "permanentAddress": "505 Spruce Drive, Star City",
+      "profileImage": "profile_emilydavis.jpg",
+      "academicDepartment": "63c1f6c9f9d5a52d4b5a11a4",
+      "isDeleted": false
+    },
+    {
+      "id": "FAC005",
+      "user": "63c1f6c9f9d5a52d4b5a10dd",
+      "designation": "Professor",
+      "name": {
+        "firstName": "William",
+        "lastName": "Taylor"
+      },
+      "gender": "other",
+      "dateOfBirth": "1982-07-18",
+      "email": "williamtaylor@example.com",
+      "contactNo": "+8642097531",
+      "emergencyContactNo": "+8642097532",
+      "bloodGroup": "O-",
+      "presentAddress": "606 Walnut Lane, Central City",
+      "permanentAddress": "707 Poplar Avenue, Central City",
+      "profileImage": "profile_williamtaylor.jpg",
+      "academicDepartment": "63c1f6c9f9d5a52d4b5a11a5",
+      "isDeleted": true
+    }
+  ]
+  
