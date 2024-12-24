@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import app from './app';
 import config from './app/config';
 import mongoose from 'mongoose';
@@ -20,7 +21,7 @@ async function main() {
 main();
 
 process.on('unhandledRejection', () => {
-  console.log(`unhandled rejection detected, shutting down server 😈😈😈 `);
+  console.log(`unhandled rejection detected, shutting down server  `);
   if (server) {
     server.close(() => [process.exit(1)]);
   }
@@ -28,8 +29,6 @@ process.on('unhandledRejection', () => {
 });
 
 process.on('uncaughtException', () => {
-  console.log(`'uncaught exception detected, shutting down server 😈😈😈 `);
+  console.log(`'uncaught exception detected, shutting down server  `);
   process.exit(1);
 });
-
-
